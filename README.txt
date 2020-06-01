@@ -21,9 +21,10 @@ C:\Program Files\Java\jdk1.8.0_181\bin, dan C:\Program Files\Java\jre1.8.0_251\b
 dan C:\Program Files (x86)\Java\jdk1.8.0_181\bin, serta C:\Program Files (x86)\Java\jre1.8.0_251\bin jika yang di install adalah jdk dan jre untuk windows 32bit pada windows 64bit.
 2. Buka cmd, dan arahkan pada direktori grafik yang telah di ekstrak dengan perintah cd "sepasi" alamat direktori. contoh:
 "cd documents\java\grafik".
-2.1. compile semua file.java dengan perintah "javac -d . file.java" secara berurutan mulai dari file Alphacomposite.java, Clipping.java, Cubiccurve.java, Feedback.java, Fontrender.java, Persegi.java, Segitiga.java, Tentang.java, dan Grafik.java sebagai file utama. contoh:
+2.1. compile semua file.java dengan perintah "javac -d . file.java" secara berurutan mulai dari file Alphacomposite.java, Clipping.java, Cubiccurve.java, Curvespline.java, Feedback.java, Fontrender.java, Persegi.java, Segitiga.java, Tentang.java, dan Grafik.java sebagai file utama. contoh:
 "javac -d . Grafik.java".
 2.2. jalankan aplikasi dengan mengetik perintah "java grafik.Grafik".
 2.3. setelah aplikasi terbuka, klik tombol tombol tersebut dengan menekan sepasi, dan tombol tab untuk berpindah antar tombol.
 2.4. untuk menutup tampilan dan keluar dari aplikasi, tekan tombol alt plus f4.
-Semoga aplikasi ini bermanfaat! kritik, saran, dan komentar anda akan membantu untuk perkembangan imajinasi saya agar bisa memvisualisasikannya dengan benar dan tepat.
+Semoga aplikasi ini bermanfaat!
+kritik, saran, dan komentar anda akan membantu untuk perkembangan imajinasi saya agar bisa memvisualisasikannya dengan benar dan tepat.
