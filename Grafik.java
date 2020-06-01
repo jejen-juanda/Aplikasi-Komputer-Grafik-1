@@ -3,6 +3,11 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.*;
 import javax.swing.*;
+import java.util.*;
+import java.awt.geom.Point2D;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.JFrame;
 /**
  *
  * @author 171011402648
@@ -18,6 +23,7 @@ private JButton tombol5;
 private JButton tombol6;
 private JButton tombol7;
 private JButton tombol8;
+private JButton tombol9;
 public Grafik() {
 super ("Aplikasi Grafik");
 this.setPreferredSize(new Dimension(750, 750));
@@ -41,7 +47,7 @@ tombol2.setBackground(Color.RED);
 tombol2.addActionListener(this);
 container.add(tombol2);
 setSize (50,50);
-setLocation(120, 10);
+setLocation(130, 10);
 tombol3 = new JButton ("Clipping");
 tombol3.setBackground(Color.RED);
 tombol3.addActionListener(this);
@@ -59,25 +65,31 @@ tombol5.setBackground(Color.RED);
 tombol5.addActionListener(this);
 container.add(tombol5);
 setSize (50,50);
-setLocation(120, 70);
+setLocation(130, 70);
 tombol6 = new JButton ("Font Render Context");
 tombol6.setBackground(Color.RED);
 tombol6.addActionListener(this);
 container.add(tombol6);
 setSize (50,50);
-setLocation(10, 120);
+setLocation(10, 130);
 tombol7 = new JButton ("Cubic Curve");
 tombol7.setBackground(Color.RED);
 tombol7.addActionListener(this);
 container.add(tombol7);
 setSize (50,50);
-setLocation(70, 120);
-tombol8 = new JButton ("FEEDBACK");
+setLocation(70, 130);
+tombol8 = new JButton ("Curve Spline");
 tombol8.setBackground(Color.RED);
 tombol8.addActionListener(this);
 container.add(tombol8);
 setSize (50,50);
-setLocation(120, 120);
+setLocation(130, 130);
+tombol9 = new JButton ("FEEDBACK");
+tombol9.setBackground(Color.RED);
+tombol9.addActionListener(this);
+container.add(tombol9);
+setSize (100,25);
+setLocation(40, 190);
 setVisible (true);
 }
 public static void main (String arg[]) {
@@ -142,6 +154,17 @@ frame.pack();
 frame.setVisible(true);
 }
 else if (e.getSource() == tombol8) {
+        JFrame frame = new JFrame("Aplikasi Grafik Kurva Spline Jejen Juanda");
+        frame.addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent e) {System.exit(0);}
+    });
+Curvespline canvas = new Curvespline();
+frame.getContentPane().add(canvas);
+frame.pack();
+frame.setVisible(true);
+}
+
+else if (e.getSource() == tombol9) {
 JFrame frame = new JFrame();
 frame.setTitle("FEEDBACK");
 Feedback canvas = new Feedback();
