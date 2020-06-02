@@ -24,6 +24,7 @@ private JButton tombol6;
 private JButton tombol7;
 private JButton tombol8;
 private JButton tombol9;
+private JButton tombola;
 public Grafik() {
 super ("Aplikasi Grafik");
 this.setPreferredSize(new Dimension(750, 750));
@@ -34,62 +35,69 @@ tombol0 = new JButton ("Tentang");
 tombol0.setBackground(Color.RED);
 tombol0.addActionListener(this);
 container.add(tombol0);
+setSize (100,25);
+setLocation(40, 10);
+tombola = new JButton ("GUI");
+tombola.setBackground(Color.RED);
+tombola.addActionListener(this);
+container.add(tombola);
 setSize (50,50);
-setLocation(10, 10);
+setLocation(10, 45);
+
 tombol1 = new JButton ("Segi Empat");
 tombol1.setBackground(Color.RED);
 tombol1.addActionListener(this);
 container.add(tombol1);
 setSize (50,50);
-setLocation(70, 10);
+setLocation(70, 45);
 tombol2 = new JButton ("Segi Tiga");
 tombol2.setBackground(Color.RED);
 tombol2.addActionListener(this);
 container.add(tombol2);
 setSize (50,50);
-setLocation(130, 10);
+setLocation(130, 45);
 tombol3 = new JButton ("Clipping");
 tombol3.setBackground(Color.RED);
 tombol3.addActionListener(this);
 container.add(tombol3);
 setSize (50,50);
-setLocation(10, 70);
+setLocation(10, 105);
 tombol4 = new JButton ("AlphaComposite");
 tombol4.setBackground(Color.RED);
 tombol4.addActionListener(this);
 container.add(tombol4);
 setSize (50,50);
-setLocation(70, 70);
+setLocation(70, 105);
 tombol5 = new JButton ("Font Transformasi Affine");
 tombol5.setBackground(Color.RED);
 tombol5.addActionListener(this);
 container.add(tombol5);
 setSize (50,50);
-setLocation(130, 70);
+setLocation(130, 105);
 tombol6 = new JButton ("Font Render Context");
 tombol6.setBackground(Color.RED);
 tombol6.addActionListener(this);
 container.add(tombol6);
 setSize (50,50);
-setLocation(10, 130);
+setLocation(10, 165);
 tombol7 = new JButton ("Cubic Curve");
 tombol7.setBackground(Color.RED);
 tombol7.addActionListener(this);
 container.add(tombol7);
 setSize (50,50);
-setLocation(70, 130);
+setLocation(70, 165);
 tombol8 = new JButton ("Curve Spline");
 tombol8.setBackground(Color.RED);
 tombol8.addActionListener(this);
 container.add(tombol8);
 setSize (50,50);
-setLocation(130, 130);
+setLocation(130, 165);
 tombol9 = new JButton ("FEEDBACK");
 tombol9.setBackground(Color.RED);
 tombol9.addActionListener(this);
 container.add(tombol9);
 setSize (100,25);
-setLocation(40, 190);
+setLocation(40, 225);
 setVisible (true);
 }
 public static void main (String arg[]) {
@@ -163,7 +171,6 @@ frame.getContentPane().add(canvas);
 frame.pack();
 frame.setVisible(true);
 }
-
 else if (e.getSource() == tombol9) {
 JFrame frame = new JFrame();
 frame.setTitle("FEEDBACK");
@@ -172,6 +179,15 @@ frame.getContentPane().add(canvas);
 frame.pack();
 frame.setVisible(true);
 }
+else if (e.getSource() == tombola) {
+JFrame frame = new JFrame();
+frame.setTitle("Aplikasi Grafik GUI Jejen Juanda");
+Gui canvas = new Gui();
+frame.getContentPane().add(canvas);
+frame.pack();
+frame.setVisible(true);
+}
+
 else {
 JFrame frame = new JFrame();
 frame.setTitle("Tentang");
