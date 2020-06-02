@@ -25,6 +25,7 @@ private JButton tombol7;
 private JButton tombol8;
 private JButton tombol9;
 private JButton tombola;
+private JButton tombolb;
 public Grafik() {
 super ("Aplikasi Grafik");
 this.setPreferredSize(new Dimension(750, 750));
@@ -36,11 +37,17 @@ tombol0.setBackground(Color.RED);
 tombol0.addActionListener(this);
 container.add(tombol0);
 setSize (100,25);
-setLocation(40, 10);
+setLocation(45, 10);
 tombola = new JButton ("GUI");
 tombola.setBackground(Color.RED);
 tombola.addActionListener(this);
 container.add(tombola);
+setSize (25,25);
+setLocation(155, 10);
+tombolb = new JButton ("QuadCurve");
+tombolb.setBackground(Color.RED);
+tombolb.addActionListener(this);
+container.add(tombolb);
 setSize (50,50);
 setLocation(10, 45);
 
@@ -183,6 +190,14 @@ else if (e.getSource() == tombola) {
 JFrame frame = new JFrame();
 frame.setTitle("Aplikasi Grafik GUI Jejen Juanda");
 Gui canvas = new Gui();
+frame.getContentPane().add(canvas);
+frame.pack();
+frame.setVisible(true);
+}
+else if (e.getSource() == tombolb) {
+JFrame frame = new JFrame();
+frame.setTitle("Aplikasi Grafik Quad Curve Jejen Juanda");
+QuadCurve canvas = new QuadCurve();
 frame.getContentPane().add(canvas);
 frame.pack();
 frame.setVisible(true);
