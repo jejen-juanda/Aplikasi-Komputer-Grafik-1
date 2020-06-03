@@ -26,6 +26,8 @@ private JButton tombol8;
 private JButton tombol9;
 private JButton tombola;
 private JButton tombolb;
+private JButton tombolc;
+private JButton tombold;
 public Grafik() {
 super ("Aplikasi Grafik");
 this.setPreferredSize(new Dimension(750, 750));
@@ -50,7 +52,6 @@ tombolb.addActionListener(this);
 container.add(tombolb);
 setSize (50,50);
 setLocation(10, 45);
-
 tombol1 = new JButton ("Segi Empat");
 tombol1.setBackground(Color.RED);
 tombol1.addActionListener(this);
@@ -104,7 +105,19 @@ tombol9.setBackground(Color.RED);
 tombol9.addActionListener(this);
 container.add(tombol9);
 setSize (100,25);
-setLocation(40, 225);
+setLocation(45, 225);
+tombolc = new JButton ("Rectangle");
+tombolc.setBackground(Color.RED);
+tombolc.addActionListener(this);
+container.add(tombolc);
+setSize (25,25);
+setLocation(155, 225);
+tombold = new JButton ("RoundRectangle");
+tombold.setBackground(Color.RED);
+tombold.addActionListener(this);
+container.add(tombold);
+setSize (25,25);
+setLocation(10, 225);
 setVisible (true);
 }
 public static void main (String arg[]) {
@@ -198,6 +211,22 @@ else if (e.getSource() == tombolb) {
 JFrame frame = new JFrame();
 frame.setTitle("Aplikasi Grafik Quad Curve Jejen Juanda");
 QuadCurve canvas = new QuadCurve();
+frame.getContentPane().add(canvas);
+frame.pack();
+frame.setVisible(true);
+}
+else if (e.getSource() == tombolc) {
+JFrame frame = new JFrame();
+frame.setTitle("Aplikasi Grafik Rectangle Jejen Juanda");
+Rectangle canvas = new Rectangle();
+frame.getContentPane().add(canvas);
+frame.pack();
+frame.setVisible(true);
+}
+else if (e.getSource() == tombold) {
+JFrame frame = new JFrame();
+frame.setTitle("Aplikasi Grafik RoundRectangle Jejen Juanda");
+Roundrectangle canvas = new Roundrectangle();
 frame.getContentPane().add(canvas);
 frame.pack();
 frame.setVisible(true);
