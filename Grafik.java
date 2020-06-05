@@ -28,12 +28,20 @@ private JButton tombola;
 private JButton tombolb;
 private JButton tombolc;
 private JButton tombold;
+private JButton tombole;
+private JButton tombolf;
 public Grafik() {
 super ("Aplikasi Grafik");
 this.setPreferredSize(new Dimension(750, 750));
 this.setBackground(Color.WHITE);
 Container container = getContentPane();
 container.setLayout(new FlowLayout());
+tombole = new JButton ("Ellipse");
+tombole.setBackground(Color.RED);
+tombole.addActionListener(this);
+container.add(tombole);
+setSize (25,25);
+setLocation(10, 10);
 tombol0 = new JButton ("Tentang");
 tombol0.setBackground(Color.RED);
 tombol0.addActionListener(this);
@@ -100,24 +108,30 @@ tombol8.addActionListener(this);
 container.add(tombol8);
 setSize (50,50);
 setLocation(130, 165);
-tombol9 = new JButton ("FEEDBACK");
-tombol9.setBackground(Color.RED);
-tombol9.addActionListener(this);
-container.add(tombol9);
-setSize (100,25);
-setLocation(45, 225);
-tombolc = new JButton ("Rectangle");
-tombolc.setBackground(Color.RED);
-tombolc.addActionListener(this);
-container.add(tombolc);
-setSize (25,25);
-setLocation(155, 225);
 tombold = new JButton ("RoundRectangle");
 tombold.setBackground(Color.RED);
 tombold.addActionListener(this);
 container.add(tombold);
 setSize (25,25);
 setLocation(10, 225);
+tombol9 = new JButton ("FEEDBACK");
+tombol9.setBackground(Color.RED);
+tombol9.addActionListener(this);
+container.add(tombol9);
+setSize (45,25);
+setLocation(45, 225);
+tombolc = new JButton ("Rectangle");
+tombolc.setBackground(Color.RED);
+tombolc.addActionListener(this);
+container.add(tombolc);
+setSize (45,25);
+setLocation(100, 225);
+tombolf = new JButton ("ARC");
+tombolf.setBackground(Color.RED);
+tombolf.addActionListener(this);
+container.add(tombolf);
+setSize (25,25);
+setLocation(155, 225);
 setVisible (true);
 }
 public static void main (String arg[]) {
@@ -231,7 +245,22 @@ frame.getContentPane().add(canvas);
 frame.pack();
 frame.setVisible(true);
 }
-
+else if (e.getSource() == tombole) {
+JFrame frame = new JFrame();
+frame.setTitle("Aplikasi Grafik Ellipse Jejen Juanda");
+Ellipse canvas = new Ellipse();
+frame.getContentPane().add(canvas);
+frame.pack();
+frame.setVisible(true);
+}
+else if (e.getSource() == tombolf) {
+JFrame frame = new JFrame();
+frame.setTitle("Aplikasi Grafik Arc Jejen Juanda");
+Arc canvas = new Arc();
+frame.getContentPane().add(canvas);
+frame.pack();
+frame.setVisible(true);
+}
 else {
 JFrame frame = new JFrame();
 frame.setTitle("Tentang");
